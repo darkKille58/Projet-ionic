@@ -1,5 +1,7 @@
 {
   "name": "GestionReunion",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
