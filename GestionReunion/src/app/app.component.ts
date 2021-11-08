@@ -1,18 +1,29 @@
 import { Component } from '@angular/core';
+import { Routes} from "@angular/router";
+import {GestionReunionComponent} from "./gestion-reunion/gestion-reunion.component";
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+  components:
+    {
+      GestionReunion
+    }
   public appPages = [
-    { title: 'Inbox', url: '/folder/Inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+    { title: 'Gestion des réunions',  icon: 'paper-plane', path: '/reunion', component: GestionReunionComponent },
+    { title: 'Gestion des salles de rénion', url: '/folder/Outbox', icon: 'paper-plane' },
+    { title: 'Gestion des employés', url: '/folder/Outbox', icon: 'paper-plane' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+
+    /*{
+      path: '/home',
+      name: 'Home',
+      component: HomePage
+    },*/
+
+
+ // public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
 }
